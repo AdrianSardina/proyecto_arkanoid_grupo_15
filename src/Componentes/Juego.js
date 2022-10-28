@@ -3,6 +3,8 @@ import Phaser from "phaser";
 import React from "react";
 import { Gameover } from "../escenas/GameOver";
 import { Portada } from "../escenas/Portada";
+import Escena from "./Escena";
+
 export default function Juego() {
 
 
@@ -11,14 +13,17 @@ export default function Juego() {
         var config = {
         type: Phaser.AUTO,
         width: 800,
-        height: 600,
+        height: 500,
         physics: {
             default: 'arcade',
             arcade: {
-           //     gravity: { y: 300 }
+             //   gravity: { y: 300 }
             }
         },
+
         scene:[Portada,Gameover]
+
+ 
         // scene: {
         //     preload: preload,
         //     create: create
