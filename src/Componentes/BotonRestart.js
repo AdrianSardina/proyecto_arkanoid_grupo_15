@@ -17,7 +17,8 @@ export class Boton {
            this.startButton.setFrame(0);
        });
         this.startButton.on('pointerdown', () => {
-            this.relatedScene.scene.start('gameOver');
+            
+            this.relatedScene.scene.start('game');
         });
     }
 }

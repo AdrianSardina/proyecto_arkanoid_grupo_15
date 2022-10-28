@@ -3,10 +3,8 @@ import Phaser from "phaser";
 import React from "react";
 import { Gameover } from "../escenas/GameOver";
 import { Portada } from "../escenas/Portada";
-import Escena from "./Escena";
-import { Congratulations } from "./Congratulation";
-
-import { Congratulations } from "./Congratulation";
+import Escena from "../escenas/Escena";
+import { Congratulations } from "../escenas/Congratulation";
 
 
 
@@ -18,7 +16,7 @@ export default function Juego() {
         var config = {
         type: Phaser.AUTO,
         width: 800,
-        height: 500,
+        height: 600,
         physics: {
             default: 'arcade',
             arcade: {
@@ -27,7 +25,7 @@ export default function Juego() {
         },
 
 
-        scene:[Portada,Gameover,Congratulations]
+        scene:[Portada,Escena,Gameover,Congratulations]
 
 
         // scene: {

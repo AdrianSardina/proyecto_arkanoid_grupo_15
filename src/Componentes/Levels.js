@@ -13,13 +13,13 @@ export class Levels extends Phaser.Scene{
     {
       var block =   this.relatedScene.physics.add.staticGroup({
             key: this.keys,
-            repeat: 7,
+            repeat: 5,
             gridAlign:
             {
                 width: 10,
                 height: 4,
                 cellWidth: 67,
-                cellHeight: 34,
+                cellHeight: 27,
                 x: 100,
                 y: 70
                
