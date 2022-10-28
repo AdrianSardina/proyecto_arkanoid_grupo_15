@@ -2,6 +2,8 @@ import { useEffect,useState } from "react";
 import Phaser from "phaser";
 import React from "react";
 import Escena from "./Escena";
+import { Congratulations } from "./Congratulation";
+
 export default function Juego() {
 
 
@@ -17,7 +19,7 @@ export default function Juego() {
              //   gravity: { y: 300 }
             }
         },
-        scene:[Escena]
+        scene:[Congratulations]
         // scene: {
         //     preload: preload,
         //     create: create

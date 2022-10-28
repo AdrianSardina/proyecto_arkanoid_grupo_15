@@ -60,7 +60,7 @@ class Escena extends Phaser.Scene {
         this.Bricks= this.levels.CreateLevelOne();    
         this.physics.add.collider(this.ball, this.Bricks, this.brickImpact, null, this);
 
-        this.physics.world.setBoundsCollision(true, true, true, false);
+        this.physics.world.setBoundsCollision(true, true, true, true);
         // this.physics.add.collider(this.ball, this.platform);
         this.physics.add.collider(this.ball, this.platform, this.platformImpact, null, this);
 
@@ -103,7 +103,7 @@ class Escena extends Phaser.Scene {
           switch (this.currentLevel) {
             case 2: //termino el nivel uno
               this.Bricks = this.levels.CreateLevelTwo();
-              this.physics.add.collider(this.ball, this.Bricks,this.impactBrick,null,this);
+              this.physics.add.collider(this.ball, this.Bricks,this.brickImpact,null,this);
               this.resetBallposition();
               break;
             case 3: // termino el nivel dos
