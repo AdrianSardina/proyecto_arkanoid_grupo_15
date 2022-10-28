@@ -9,7 +9,7 @@ export class Boton {
         );
     }
     create() {
-        this.startButton = this.relatedScene.add.sprite(400, 500, 'button').setInteractive().setScale(.3);
+        this.startButton = this.relatedScene.add.sprite(400, 500, 'button').setInteractive().setScale(.4);
         this.startButton.on('pointerover', () => {
             this.startButton.setFrame(1);
         });
@@ -17,7 +17,7 @@ export class Boton {
            this.startButton.setFrame(0);
        });
         this.startButton.on('pointerdown', () => {
-            this.relatedScene.scene.start('Juego');
+            this.relatedScene.scene.start('gameOver');
         });
     }
 }
