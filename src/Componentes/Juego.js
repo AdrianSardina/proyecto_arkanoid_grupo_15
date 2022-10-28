@@ -1,8 +1,14 @@
 import { useEffect,useState } from "react";
 import Phaser from "phaser";
 import React from "react";
+import { Gameover } from "../escenas/GameOver";
+import { Portada } from "../escenas/Portada";
 import Escena from "./Escena";
 import { Congratulations } from "./Congratulation";
+
+import { Congratulations } from "./Congratulation";
+
+
 
 export default function Juego() {
 
@@ -19,7 +25,11 @@ export default function Juego() {
              //   gravity: { y: 300 }
             }
         },
-        scene:[Congratulations]
+
+
+        scene:[Portada,Gameover,Congratulations]
+
+
         // scene: {
         //     preload: preload,
         //     create: create

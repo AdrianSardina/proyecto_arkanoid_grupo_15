@@ -30,7 +30,7 @@ export default function Game() {
         <Boton></Boton>
         <BrowserRouter>
         <Routes>
-        <Route path="/" element={<Inicio text=" - El Fantastico Juego del Ahorcadito"/>}/>;
+        <Route path="/" element={<Inicio text="- Juegos Grupo 15 -v"/>}/>;
         <Route path="/piedrapapeltijeras" element={<PiedraPapelTijeras/>}/>;
         <Route path="/ahorcadito" element={<Ahorcadito/>}/>
         <Route path="/nosotros" element={<Nosotros/>}/>;
