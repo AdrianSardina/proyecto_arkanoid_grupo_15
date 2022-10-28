@@ -13,7 +13,7 @@ class Escena extends Phaser.Scene {
     {
         this.ball.setData('glue', true);
         this.ball.x = this.platform.x;
-        this.ball.y=380;
+        this.ball.y=400;
         this.ball.setVelocityY(0);
     }
     brickImpact(player,brick)
@@ -107,7 +107,7 @@ class Escena extends Phaser.Scene {
               this.resetBallposition();
               break;
             case 3: // termino el nivel dos
-
+              this.scene.start('contragulations')
               break;
             
           }
