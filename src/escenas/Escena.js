@@ -74,10 +74,18 @@ class Escena extends Phaser.Scene {
         this.ball.setCollideWorldBounds(true);
         this.ball.setBounce(1);
         //this.ball.setVelocity(100, 10)
+      switch(this.game.global.nivelactual){
+        case 1:
+          this.Bricks= this.levels.CreateLevelOne();  
+          this.physics.add.collider(this.ball, this.Bricks, this.brickImpact, null, this);
+  
+          break;
+        case 2:
+          this.Bricks= this.levels.CreateLevelTwo();
+          this.physics.add.collider(this.ball, this.Bricks, this.brickImpact, null, this);    
+          break;
 
-        this.Bricks= this.levels.CreateLevelOne();    
-        this.physics.add.collider(this.ball, this.Bricks, this.brickImpact, null, this);
-
+      }       
         this.physics.world.setBoundsCollision(true, true, true, false);
         // this.physics.add.collider(this.ball, this.platform);
         this.physics.add.collider(this.ball, this.platform, this.platformImpact, null, this);
@@ -85,6 +93,7 @@ class Escena extends Phaser.Scene {
 
     }
     update() {
+      console.log(this.game.global.nivelactual)
         if (this.cursors.left.isDown) {
           this.platform.setVelocityX(-500);
           if(this.ball.getData('glue')) {
@@ -120,8 +129,8 @@ class Escena extends Phaser.Scene {
         }
         if(this.Bricks.countActive() == 0)
         {
-          this.currentLevel++;
-          switch (this.currentLevel) {
+          this.game.global.nivelactual++;
+          switch (this.game.global.nivelactual) {
             case 2: //termino el nivel uno
               this.Bricks = this.levels.CreateLevelTwo();
               this.physics.add.collider(this.ball, this.Bricks,this.brickImpact,null,this);

@@ -25,6 +25,11 @@ export default function App() {
         };
         //Arranca el juego
         var game = new Phaser.Game(config);
+            game.global = {
+            nivelactual: 2,
+            score : 0,
+            sound : false
+           }
         //triger cuando el juego esta completamente listo   
         game.events.on("LISTO", setListo)
         //si no pongo esto, se acumulan duplicado de lienzo

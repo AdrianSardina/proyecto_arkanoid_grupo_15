@@ -2,8 +2,8 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 
 
-class Masjuegos extends React.Component {
-    render() {
+function Masjuegos () {
+    
         return (
             <>
             <div className="masJuegos">
@@ -15,12 +15,9 @@ class Masjuegos extends React.Component {
             <div className="b1">
             <Button href="/ahorcadito" variant="outline-light " size="lg">Ahorcadito</Button>
             </div>
-            <div className="b1">
-            <Button href="/arkanoid" variant="outline-light " size="lg">Arkanoid</Button>
-            </div>
             </div>
             </>
         );
-    }
+    
 }
 export default Masjuegos;

@@ -36,6 +36,11 @@ export default function Juego() {
 
           //arranca el juego
           var game = new Phaser.Game(config);
+          game.global = {
+            nivelactual: 2,
+            score : 0,
+            sound : false
+           }
           //Trigger cuando el juego esta completamente listo
          game.events.on("LISTO",setListo)
     
