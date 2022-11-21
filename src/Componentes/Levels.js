@@ -13,7 +13,7 @@ export class Levels extends Phaser.Scene{
     {
       var block =   this.relatedScene.physics.add.staticGroup({
             key: this.keys,
-            repeat: 0,
+            repeat:5,
             gridAlign:
             {
                 width: 10,
@@ -35,7 +35,7 @@ export class Levels extends Phaser.Scene{
     {
       var block = this.relatedScene.physics.add.staticGroup();
        var ind =1;
-      for(var i=0;i<2;i++)
+      for(var i=0;i<8;i++)
       {
         for(var j=0;j<ind;j++)
         {
